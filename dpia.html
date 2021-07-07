@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required Styles -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>DPIA-Dashboard</title>
+  </head>
+  <body>
+<!-- Start of Header -->
+    <header class="fixed-top bg-primary">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="me-2 me-lg-3 brand">
+            <a
+              class="navbar-brand custom-family fw-light fs-xlarge"
+              href="./index.html"
+            >
+              Data<span class="fw-bold">Shield</span>
+            </a>
+            <p class="mb-0 text-white fst-italic fw-light fs-s fs-lg-m">
+              Where expertise meets business needs
+            </p>
+          </div>
+          <button
+            class="navbar-toggler px-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#landingNavbar"
+            aria-controls="landingNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="
+              collapse
+              navbar-collapse
+              px-3 px-lg-0
+              bg-second bg-lg-transparent
+              justify-content-lg-end
+            "
+            id="landingNavbar"
+          >
+            <ul class="navbar-nav justify-content-lg-evenly mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./dashboard.html"
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Modules
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseOne"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item mt-2"
+                      href="./record-of-processing.html"
+                      >Record of Processing</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./dpia.html">DPIA</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Data Breaches</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./business-units.html"
+                      >TPRMs</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Transparency & Consent</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="#"
+                      >GDPR Audit</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Management
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseTwo"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./business-units.html"
+                      >Business Units</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./access.html">Access</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./notifications.html"
+                      >Notifications</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav flex-row position-relative ms-lg-3">
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Account
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseThree"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./settings.html"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./index.html"
+                      >Log Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="px-4 py-2 header-help">
+                <i class="fas fa-question-circle text-white"></i>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of Content-box -->
+    <article
+      class="
+        content-box
+        d-flex
+        g-0
+        bg-white
+        overflow-x-hidden
+        position-relative
+        custom-height
+      "
+      id="overlay"
+    >
+      <!-- Start of Guidance -->
+      <aside
+        class="guidance p-4 smooth d-flex flex-column flex-shrink-0"
+        id="guidance"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="guidance"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-left smooth"></i>
+        </button>
+        <h4 class="my-3 text-decoration-underline text-primary fw-bold fs-l">
+          Guidance
+        </h4>
+        <div class="info fw-bold smooth bg-white flex-fill p-3 rounded-1">
+          DPIA pre-assessment
+        </div>
+      </aside>
+      <!-- End of Guidance -->
+      <!--Start of Content-->
+      <section class="dashboard-content flex-fill">
+        <div
+          class="
+            d-flex
+            flex-column flex-sm-row
+            justify-content-center justify-content-sm-between
+            align-items-center
+            mb-3
+          "
+          >
+          <h3 class="text-primary mt-lg-4 fw-bold h4 mb-3">
+            DPIA
+          </h3>
+          <a
+            href="./dpia-reports.html"
+            class="
+              bg-primary
+              text-white
+              shadow
+              fs-l
+              py-2
+              px-4
+              text-decoration-none text-uppercase
+              rounded-2
+            "
+            data-customshow=""
+          >reports</a>
+        </div>
+        <h4 class="step-title text-primary ms-0 ms-sm-5 mb-4 fw-bold invisible">Steps:</h4>
+        <!-- Pagination Nav -->
+        <div class="pagination-nav ms-0 ms-sm-5 d-flex flex-wrap mb-4 justify-content-center justify-content-sm-start">
+          <button role="button" class="text-center smooth fw-bold p-3 mb-2 mx-1" data-paginationnav="pre">Pre-assessement</button>
+          <button role="button" role="button" class="text-center smooth fw-bold p-3 mb-2 mx-1" data-paginationnav="dpia">DPIA</button>
+          <button role="button" class="text-center smooth fw-bold p-3 mb-2 mx-1" data-paginationnav="action">Action Plan</button>
+        </div>
+        <div class="dpia-steps">
+          <ol class="ms-0 ms-sm-5">
+            <li class="mb-2">Pre-assessment: fill-out the form to evaluate if the processing is high-risk and if you need to perform a DPIA.</li>
+            <li class="mb-2">DPIA: conduct a fully fledged Data Protection Impact Assessment to identify privacy risks and mitigation actions.</li>
+            <li class="mb-2">Action Plan: get an overview and follow the status of the mitigation actions.</li>
+            <li>See my reports: view all your completed DPIAs.</li>
+          </ol>
+        </div>
+        <!-- DPIA Pre-assessement -->
+        <div class="dpia-steps d-none" id="pre">
+          <h5 class="text-primary fw-bold mb-3 text-center text-sm-start">DPIA pre-assessement</h5>
+          <div class="borderHover bg-icon shadow smooth py-4 px-1 px-sm-4 rounded-1 position-relative">
+            <button role="button" class="btn special-button smooth bg-primary text-white b-w position-absolute end-0 mx-3 border border-primary rounded-1 d-none" data-customshow="finish" data-paginationnav="dpia">Conduct a DPIA</button>
+            <!-- Pagination Bullets -->
+            <ul class="pagination-bullets list-unstyled position-relative d-flex justify-content-between mx-auto mb-4 w-50">
+              <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth active" data-pagination="introduction">1</li>
+              <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth" data-pagination="preAssess">2</li>
+              <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth" data-pagination="finish">
+                <i class="material-icons">done_all</i>
+              </li>
+            </ul>
+            <!-- Introduction Step -->
+            <form action="" class="wizard ms-4" id="introduction">
+              <div class="row mb-3 px-1">
+                <div class="col-12">
+                  <h6 class="text-primary fw-bold mb-0">Introduction</h6>
+                  <p>*Please complete the required fields</p>
+                </div>
+              </div>
+              <div class="row mb-3 p-2">
+                <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                  <label class="form-label fw-bold">Business Unit Responsible*</label>
+                </div>
+                <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                  <select
+                    class="form-select form-select-sm py-2 border-primary cursor-pointer">
+                    <option selected>Select Business Unit</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-4 p-2">
+                <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                  <label class="form-label fw-bold">Contact person*</label>
+                </div>
+                <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 d-flex">
+                  <input type="email" class="border-0 bg-transparent px-2 py-1 w-75 f-outline-none" value="jeanclaude@company.com" readonly />
+                  <i
+                    class="material-icons text-primary cursor-pointer"
+                    onclick="this.previousElementSibling.hasAttribute('readonly') ? this.previousElementSibling.removeAttribute('readonly') : null"
+                    >
+                    create
+                  </i>
+                </div>
+              </div>
+              <!-- Accordion -->
+              <div class="accordion position-relative">
+                <button class="expandUpDown position-absolute rounded-circle border border-primary text-primary bg-white smooth" type="button" data-bs-toggle="collapse" data-bs-target="#recordCollapse" aria-expanded="true" aria-controls="recordCollapse">
+                  <i class="fas fa-chevron-up smooth"></i>
+                </button>
+                <div id="recordCollapse" class="collapse show smooth" aria-labelledby="headingOne">
+                  <div class="row mb-4 p-2">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Product/application/activity*</label>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                      <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+                    </div>
+                  </div>
+                  <div class="row mb-4 p-2">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Date*</label>
+                    </div>
+                    <div class="col-12 col-sm-3 col-xl-12 col-xxl-3">
+                      <input type="date" value="2021-08-12" class="date-pointer borderHover shadow smooth rounded-1 px-2 py-1 w-100 f-outline-none" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border d-block w-fit ms-auto me-4" data-next="preAssess">next</button>
+            </form>
+            <!-- Pre Assessment Step -->
+            <div class="wizard d-none" id="preAssess">
+              <div class="accordion position-relative">
+                <button class="expandUpDown position-absolute rounded-circle border border-primary text-primary bg-white smooth" type="button" data-bs-toggle="collapse" data-bs-target="#recordCollapse" aria-expanded="true" aria-controls="recordCollapse">
+                  <i class="fas fa-chevron-up smooth"></i>
+                </button>
+                <div class="row mb-3 px-1">
+                  <div class="col-12">
+                    <h6 class="text-primary fw-bold mb-0">Pre-assessment</h6>
+                    <p>*Please answer yes when applicable.</p>
+                  </div>
+                </div>
+                <div id="recordCollapse" class="collapse show smooth" aria-labelledby="headingOne">
+                  <div class="table-responsive ms-4">
+                    <table class="table border border-bdColor align-middle w-responsive">
+                      <thead>
+                        <tr>
+                          <th class="col-6 border-bdColor" scope="col"></th>
+                          <th class="col-2 text-center border-bdColor" scope="col">Answer</th>
+                          <th class="col-2 text-center border-bdColor" scope="col">Risk</th>
+                          <th class="col-2 text-center border-bdColor" scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity involves automated evaluation or scoring of personal aspects such as profiling and predicting (e.g., credit risk profiling, investment profile, advertisement).</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes1" id="yes1" data-yes="1">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes1" data-yes="1">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes1" id="no1" data-no="1">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no1" data-no="1">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="1" disabled>Conduct a DPIA</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity is made on sensitive data or data of highly personal nature (e.g., criminal convictions, health data, financial history, data on poverty, unemployment, the involvement of youth services or social work, data on domestic and private activities, location data).</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes2" id="yes2" data-yes="2">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes2" data-yes="2">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes2" id="no2" data-no="2">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no2" data-no="2">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="2" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity involves systematic monitoring (e.g., geolocation tracking, camera surveillance on a publically accessible area).</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes3" id="yes3" data-yes="3">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes3" data-yes="3">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes3" id="no3" data-no="3">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no3" data-no="3">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="3" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity involves data processed on a large scale (e.g.,publically accessible area, large volume of data).</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes4" id="yes4" data-yes="4">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes4" data-yes="4">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes4" id="no4" data-no="4">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no4" data-no="4">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="4" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity involves  matching or combining datasets.</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes5" id="yes5" data-yes="5">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes5" data-yes="5">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes5" id="no5" data-no="5">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no5" data-no="5">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="5" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity involves data concerning vulnerable data subjects (e.g., children).</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes6" id="yes6" data-yes="6">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes6" data-yes="6">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes6" id="no6" data-no="6">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no6" data-no="6">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="6" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity involves innovative use or applying new technological or organisational solutions.</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes7" id="yes7" data-yes="7">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes7" data-yes="7">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes7" id="no7" data-no="7">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no7" data-no="7">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="7" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity makes use of biometric data for identification purposes (e.g., fingerprint scan for building entering).</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes8" id="yes8" data-yes="8">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes8" data-yes="8">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes8" id="no8" data-no="8">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no8" data-no="8">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="8" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">The processing activity involves large-scale and/or systematic processing of telephony, Internet or other communication data, metadata or data relating to the location of natural persons or leading to natural persons (e.g. wifi-tracking or the processing of location data), where the processing is not strictly necessary for a service requested by the person concerned;</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes9" id="yes9" data-yes="9">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes9" data-yes="9">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes9" id="no9" data-no="9">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no9" data-no="9">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="9" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">Data collected on a large scale from third parties in order to analyse or predict the economic situation, health, personal preferences or interests, reliability or behaviour, location or movement of natural persons;</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes10" id="yes10" data-yes="10">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes10" data-yes="10">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes10" id="no10" data-no="10">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no10" data-no="10">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="10" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">Processing operations which consist of or include regular and systematic monitoring of the activities of employees, provided that they may produce legal effects with regard to employees or affect them in a significant way.</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes11" id="yes11" data-yes="11">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes11" data-yes="11">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes11" id="no11" data-no="11">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no11" data-no="11">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="11" disabled>No action required</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-6" scope="col">
+                            <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                            <p class="fw-bold ms-3">Personal data is collected from third parties in order to be subsequently taken into account in the decision to refuse or terminate a specific service contract with a natural person.</p>
+                            <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s">Add a comment…</textarea>
+                          </td>
+                          <td class="col-2 clearfix" scope="col">
+                            <div class="form-check float-start ms-4 me-3">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes12" id="yes12" data-yes="12">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="yes12" data-yes="12">
+                                yes
+                              </label>
+                            </div>
+                            <div class="form-check float-start">
+                              <input class="form-check-input cursor-pointer" type="radio" name="yes12" id="no12" data-no="12">
+                              <label class="form-check-label text-uppercase cursor-pointer" for="no12" data-no="12">
+                                no
+                              </label>
+                            </div>
+                          </td>
+                          <td class="col-2 text-center">
+                            <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                          </td>
+                          <td class="col-2 text-center">
+                            <button role="button" class="btn rounded-2 p-2 b-w fs-s smooth border" data-paginationnav="dpia" id="12" disabled>No action required</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <button class="ms-4 text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border" data-back="introduction">back</button>
+              <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border float-end me-4" data-next="finish">next</button>
+            </div>
+            <!-- Finish step -->
+            <div class="wizard d-none" id="finish">
+              <h4 class="text-primary fw-bold text-center mb-4">Congratulations!</h4>
+              <p class="fw-bold lh-sm text-primary text-center w-75 mx-auto px-5 mb-4">
+                You finished a new process!<br />
+                You can now notify your top management or export the report as a PDF or xls file. You can always view and modify your process in report menu.
+              </p>
+              <!-- Options -->
+              <div class="d-flex flex-wrap justify-content-center mb-4">
+                <button type="button" class="borderHover shadow smooth bg-white text-primary text-uppercase fw-bold py-2 px-3 b-w rounded-2 mx-4 mb-3" data-bs-toggle="modal" data-bs-target="#notify">
+                  notify
+                </button>
+                <button type="button" class="borderHover shadow smooth bg-white text-primary text-uppercase fw-bold py-2 px-3 b-w rounded-2 mx-4 mb-3">
+                  <img src="./images/pdf-image.png" alt="PDF" />export
+                </button>
+                <button type="button" class="borderHover shadow smooth bg-white text-primary text-uppercase fw-bold py-2 px-3 b-w rounded-2 mx-4 mb-3">
+                  <img src="./images/xcel-image.png" alt="XCEL" />export
+                </button>
+              </div>
+              <!-- Notify -->
+              <div class="modal fade" id="notify" tabindex="-1" aria-labelledby="notifyLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content border-3 border-primary rounded-1 p-3 align-items-center">
+                    <button type="button" class="btn-close fs-s ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <a href="./dashboard.html" class="mb-4">
+                      <i class="material-icons text-white bg-primary fs-1 p-3 rounded-circle">done_all</i>
+                    </a>
+                    <p class="text-center">You just notified your top management. It will be able to comment your answers.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Record Details -->
+              <span class="d-block text-center mb-3">Document overview:</span>
+              <!-- Accordion -->
+              <div class="accordion position-relative">
+                <button class="expandUpDown position-absolute rounded-circle border border-primary text-primary bg-white smooth" type="button" data-bs-toggle="collapse" data-bs-target="#recordCollapse" aria-expanded="true" aria-controls="recordCollapse">
+                  <i class="fas fa-chevron-up smooth"></i>
+                </button>
+                <div id="recordCollapse" class="collapse show smooth" aria-labelledby="headingOne">
+                  <!-- Introduction Details -->
+                  <div class="bg-white px-3 py-4 rounded-1 border border-bdColor position-relative mb-3">
+                    <button role="button" class="text-white text-uppercase b-w py-2 px-3 rounded-2 bg-primary border fs-l border-primary position-absolute end-0 mx-3" data-edit="introduction">edit</button>
+                    <h5 class="text-primary fw-bold mb-4">Introduction</h5>
+                    <div class="row ms-1 mb-3">
+                      <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                        <label class="form-label fw-bold">Business Unit Responsible*</label>
+                      </div>
+                      <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">
+                        <select
+                          class="form-select form-select-sm py-2 border-primary bg-white" disabled>
+                          <option value="finance" selected>Finance</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row ms-1 mb-3">
+                      <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                        <label class="form-label fw-bold">Contact Person</label>
+                      </div>
+                      <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">jeanedouard@company.com</div>
+                    </div>
+                    <div class="row ms-1 mb-3">
+                      <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                        <label class="form-label fw-bold">Product/application/activity*</label>
+                      </div>
+                      <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                    </div>
+                    <div class="row ms-1">
+                      <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                        <label class="form-label fw-bold">Date*</label>
+                      </div>
+                      <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">
+                        <input type="date" value="2021-08-12" class="shadow smooth borderHover p-2 rounded-1 f-outline-none" disabled />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Pre Assessment Details -->
+                  <div class="bg-white px-3 py-4 rounded-1 border border-bdColor position-relative mb-3">
+                    <button role="button" class="text-white text-uppercase b-w py-2 px-3 rounded-2 bg-primary border fs-l border-primary position-absolute end-0 mx-3" data-edit="preAssess">edit</button>
+                    <div class="table-responsive mt-5 pt-3">
+                      <table class="table align-middle border border-bdColor w-responsive">
+                        <thead>
+                          <tr>
+                            <th class="col-6 border-bdColor" scope="col"></th>
+                            <th class="col-2 text-center border-bdColor" scope="col">Answer</th>
+                            <th class="col-2 text-center border-bdColor" scope="col">Risk</th>
+                            <th class="col-2 text-center border-bdColor" scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity involves automated evaluation or scoring of personal aspects such as profiling and predicting (e.g., credit risk profiling, investment profile, advertisement).</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span class="rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity is made on sensitive data or data of highly personal nature (e.g., criminal convictions, health data, financial history, data on poverty, unemployment, the involvement of youth services or social work, data on domestic and private activities, location data).</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span class="rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity involves systematic monitoring (e.g., geolocation tracking, camera surveillance on a publically accessible area).</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity involves data processed on a large scale (e.g.,publically accessible area, large volume of data).</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity involves  matching or combining datasets.</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity involves data concerning vulnerable data subjects (e.g., children).</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity involves innovative use or applying new technological or organisational solutions.</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity makes use of biometric data for identification purposes (e.g., fingerprint scan for building entering).</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">The processing activity involves large-scale and/or systematic processing of telephony, Internet or other communication data, metadata or data relating to the location of natural persons or leading to natural persons (e.g. wifi-tracking or the processing of location data), where the processing is not strictly necessary for a service requested by the person concerned;</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">Data collected on a large scale from third parties in order to analyse or predict the economic situation, health, personal preferences or interests, reliability or behaviour, location or movement of natural persons;</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">Processing operations which consist of or include regular and systematic monitoring of the activities of employees, provided that they may produce legal effects with regard to employees or affect them in a significant way.</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="col-6" scope="col">
+                              <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1">?</span>
+                              <p class="fw-bold ms-3">Personal data is collected from third parties in order to be subsequently taken into account in the decision to refuse or terminate a specific service contract with a natural person.</p>
+                              <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 f-outline-none p-2 ms-3 fs-s" readonly>Add a comment…</textarea>
+                            </td>
+                            <td class="col-2 text-center text-uppercase" scope="col">no</td>
+                            <td class="col-2 text-center">
+                              <span class="text-uppercase low text-white p-2 fw-bold">low</span>
+                            </td>
+                            <td class="col-2 text-center">
+                              <span role="button" class="btn rounded-2 p-2 b-w fs-s smooth border">No action required</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DPIA -->
+        <div class="dpia-steps d-none" id="dpia">
+          DPIA Not Designed Yet.
+        </div>
+        <!-- Action Plans -->
+        <div class="dpia-steps d-none" id="action">
+          Actions Not Designed Yet.
+        </div>
+      </section>
+      <!--End of Content-->
+      <!-- Start of Knowledge -->
+      <aside
+        class="knowledge p-4 smooth d-flex flex-column flex-shrink-0"
+        id="knowledge"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="knowledge"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-right smooth"></i>
+        </button>
+        <div class="d-flex justify-content-end my-3">
+          <i class="material-icons text-primary mx-2">inbox</i>
+          <h4 class="text-decoration-underline text-primary fw-bold fs-l">
+            Knowledge base
+          </h4>
+        </div>
+        <div class="search position-relative mb-4">
+          <input
+            class="w-100 py-2 ps-3 pe-4 smooth"
+            type="text"
+            placeholder="Search content…"
+          />
+          <button class="position-y-center search-button bg-transparent">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="info smooth bg-white flex-fill p-3 rounded-1"></div>
+      </aside>
+      <!-- Start of Knowledge -->
+    </article>
+    <!-- End of Content-box -->
+
+    <!-- Required Scripts -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

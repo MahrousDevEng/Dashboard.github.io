@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required Styles -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Landing-Dashboard</title>
+  </head>
+  <body>
+    <!-- Start of Header -->
+    <header class="fixed-top bg-primary">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="me-2 me-lg-3 brand">
+            <a
+              class="navbar-brand custom-family fw-light fs-xlarge"
+              href="./index.html"
+            >
+              Data<span class="fw-bold">Shield</span>
+            </a>
+            <p class="mb-0 text-white fst-italic fw-light fs-s fs-lg-m">
+              Where expertise meets business needs
+            </p>
+          </div>
+          <button
+            class="navbar-toggler px-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#landingNavbar"
+            aria-controls="landingNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="
+              collapse
+              navbar-collapse
+              px-3 px-lg-0
+              bg-second bg-lg-transparent
+              justify-content-lg-end
+            "
+            id="landingNavbar"
+          >
+            <ul class="navbar-nav justify-content-lg-evenly mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our expertise</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <ul
+              class="
+                navbar-nav
+                flex-row
+                align-items-center
+                flex-shrink-0
+                ms-lg-3
+              "
+            >
+              <li class="nav-item">
+                <a href="./login.html" class="nav-link">Sign In</a>
+              </li>
+              <li class="nav-item text-white p-2">/</li>
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">Sign Up</a>
+              </li>
+              <li class="nav-item mx-3">
+                <i class="fas fa-question-circle text-white"></i>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of Content -->
+    <article class="row g-0">
+      <div class="col-12 col-lg-6">
+        <!-- Start of Landing-page -->
+        <div class="landing position-relative px-2 custom-height">
+          <div
+            class="
+              services-box
+              position-relative
+              d-flex
+              align-items-center
+              py-5
+            "
+          >
+            <div
+              class="
+                services
+                w-100
+                ms-xl-5
+                justify-content-center justify-content-xl-start
+              "
+            >
+              <a href="./record-of-processing.html" class="service rounded-3">
+                <i class="material-icons">dns</i>
+                <span>Record Of Process</span>
+              </a>
+              <a href="./dpia.html" class="service rounded-3">
+                <i class="material-icons">screen_lock_portrait</i>
+                <span>DPIA</span>
+              </a>
+              <a href="#" class="service rounded-3">
+                <i class="material-icons">lock_open</i>
+                <span>Data Breaches</span>
+              </a>
+              <a href="./business-units.html" class="service rounded-3">
+                <i class="material-icons">security</i>
+                <span>TPRMs</span>
+              </a>
+              <a href="#" class="service rounded-3">
+                <i class="material-icons">search</i>
+                <span>DPO Outsourced</span>
+              </a>
+              <a href="#" class="service rounded-3">
+                <i class="material-icons">vpn_lock</i>
+                <span>GDPR Privacy</span>
+              </a>
+            </div>
+          </div>
+          <div class="quote position-relative text-white pb-5 ps-sm-5">
+            <h2 class="fw-bold">
+              « Where expertise meets<br />business needs »
+            </h2>
+            <p>Dessislava Vitcheva. Founder & Senior DPO</p>
+          </div>
+        </div>
+        <!-- End of Landing-page -->
+      </div>
+      <div class="col-12 col-lg-6">
+        <!-- Start of Registeration-form -->
+        <div
+          class="
+            register
+            bg-white
+            d-flex
+            justify-content-center
+            align-items-center
+            custom-height
+            px-3
+          "
+        >
+          <form class="row g-3 mx-0 my-3 p-3">
+            <h3 class="text-center fs-xlarge fw-bold text-primary">
+              Admin Registration
+            </h3>
+            <div class="col-lg-6">
+              <label for="fName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control rounded-2"
+                id="fName"
+                name="firstName"
+              />
+            </div>
+            <div class="col-lg-6">
+              <label for="famName" class="form-label">Family Name</label>
+              <input
+                type="text"
+                class="form-control rounded-2"
+                id="famName"
+                name="familyName"
+              />
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control rounded-2"
+                id="email"
+                name="email"
+              />
+            </div>
+            <div class="col-12">
+              <label for="company" class="form-label">Company Name</label>
+              <input
+                type="text"
+                class="form-control rounded-2"
+                id="company"
+                name="companyName"
+              />
+            </div>
+            <div class="col-12">
+              <label for="pass" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control rounded-2"
+                id="pass"
+                name="pass"
+              />
+            </div>
+            <div class="col-12">
+              <label for="conpass" class="form-label">Confirm password</label>
+              <input
+                type="password"
+                class="form-control rounded-2"
+                id="conpass"
+                name="confirmPass"
+              />
+            </div>
+            <div class="col-12">
+              <a
+                href="./confirm.html"
+                type="submit"
+                class="btn btn-primary bg-primary d-block my-3 fw-bold fs-l rounded-2"
+                role="button"
+                >Confirm</a
+              >
+              <p class="fs-s text-center">
+                By continuing you accept our
+                <a href="#">terms and conditions</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <!-- End of Registeration-form -->
+      </div>
+    </article>
+    <!-- Start of Content -->
+
+    <!-- Start of Help -->
+    <article class="help position-fixed smooth">
+      <span class="d-block text-white bg-primary rounded-circle text-center fw-bold fs-l smooth d-lg-none position-absolute position-y-center">?</span>
+      <div class="help-box shadow rounded-2 smooth d-flex flex-column text-center bg-white p-2">
+        <i class="material-icons smooth">textsms</i>
+        <a href="#" class="fs-s mt-1">Ask for Help</a>
+      </div>
+    </article>
+    <!-- Start of Help -->
+
+    <!-- Required Scripts -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>

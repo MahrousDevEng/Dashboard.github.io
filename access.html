@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required Styles -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Access-Dashboard</title>
+  </head>
+  <body>
+    <!-- Start of Header -->
+    <header class="fixed-top bg-primary">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="me-2 me-lg-3 brand">
+            <a
+              class="navbar-brand custom-family fw-light fs-xlarge"
+              href="./index.html"
+            >
+              Data<span class="fw-bold">Shield</span>
+            </a>
+            <p class="mb-0 text-white fst-italic fw-light fs-s fs-lg-m">
+              Where expertise meets business needs
+            </p>
+          </div>
+          <button
+            class="navbar-toggler px-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#landingNavbar"
+            aria-controls="landingNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="
+              collapse
+              navbar-collapse
+              px-3 px-lg-0
+              bg-second bg-lg-transparent
+              justify-content-lg-end
+            "
+            id="landingNavbar"
+          >
+            <ul class="navbar-nav justify-content-lg-evenly mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./dashboard.html"
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Modules
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseOne"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./record-of-processing.html"
+                      >Record of Processing</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./dpia.html">DPIA</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Data Breaches</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./business-units.html">TPRMs</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Transparency & Consent</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="#">GDPR Audit</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Management
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseTwo"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./business-units.html">Business Units</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./access.html">Access</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./notifications.html">Notifications</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav flex-row position-relative ms-lg-3">
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Account
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseThree"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./settings.html"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./index.html"
+                      >Log Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="px-4 py-2 header-help">
+                <i class="fas fa-question-circle text-white"></i>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of Content-box -->
+    <article
+      class="
+        content-box
+        d-flex
+        g-0
+        bg-white
+        overflow-x-hidden
+        position-relative
+        custom-height
+      "
+      id="overlay"
+    >
+      <!-- Start of Guidance -->
+      <aside
+        class="guidance p-4 smooth d-flex flex-column flex-shrink-0"
+        id="guidance"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="guidance"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-left smooth"></i>
+        </button>
+        <h4 class="my-3 text-decoration-underline text-primary fw-bold fs-l">
+          Guidance
+        </h4>
+        <div class="info smooth bg-white flex-fill p-3 rounded-1">
+          How to use DataShield?
+        </div>
+      </aside>
+      <!-- End of Guidance -->
+      <!--Start of Content-->
+      <section class="dashboard-content flex-fill">
+        <h3
+          class="
+            text-primary
+            mt-lg-4
+            fw-bold
+            fs-xlarge
+            text-center text-sm-start
+            mb-3
+          "
+        >
+        Access management
+        </h3>
+        <div class="business-units smooth py-3 px-2 px-sm-4 rounded-1 shadow">
+          <h5 class="text-primary fw-bold fs-m mb-4">Invite new user</h5>
+          <form action="" class="row px-2">
+            <div class="col-12 col-md-6 col-xl-12 col-xxl-5 mb-3">
+              <label class="form-label">Unit Name*</label>
+              <input
+                type="text"
+                class="form-control rounded-2"
+                name="unitName"
+                required
+              />
+            </div>
+            <div class="col-12 col-md-6 col-xl-12 col-xxl-7 mb-3">
+              <label class="form-label"
+                >Invite  by email</label
+              >
+              <input
+                type="email"
+                class="form-control rounded-2"
+                name="officerEmail"
+              />
+            </div>
+            <div class="col-12 col-md-6 col-xl-12 col-xxl-5 mb-3">
+              <label class="form-label">Choose role</label>
+              <select class="form-select form-select-sm rounded-2 form-control ps-4 py-2" aria-label=".form-select-lg example">
+                <option hidden></option>
+                <option value="Editor">Editor</option>
+                <option value="Reader">Reader</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </div>
+            <div class="col-4 col-xl-5 mt-2">
+              <button
+                role="button"
+                type="submit"
+                class="form-control mt-md-4 py-1 bg-primary text-white fs-lg rounded-2 text-transform-uppercase"
+                id="email"
+                name="officerEmail"
+              >
+              INVITE
+              </button>
+            </div>
+          </form>
+          <h5 class="text-primary fw-bold fs-m mt-5 mb-3">Users:</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered border-dark">
+              <thead>
+                <tr>
+                  <th>Unit Name</th>
+                  <th>Business Officer</th>
+                  <th>Role</th>
+                  <th>Invitation Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jean F</td>
+                  <td>name@marketing.com</td>
+                  <td>
+                    <select class="form-select form-select-sm border-0">
+                      <option value="Editor">Editor</option>
+                      <option value="Reader" selected>Reader</option>
+                      <option value="Reader">Admin</option>
+                    </select>
+                  </td>
+                  <td>Confirmed</td>
+                  <td>
+                    <button type="button" class="text-danger text-decoration-underline border-0 bg-transparent fw-bold">Delete User</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jean V</td>
+                  <td>name@marketing.com</td>
+                  <td>
+                    <select class="form-select form-select-sm border-0">
+                      <option value="Editor" selected>Editor</option>
+                      <option value="Reader">Reader</option>
+                      <option value="Reader">Admin</option>
+                    </select>
+                  </td>
+                  <td>Confirmed</td>
+                  <td>
+                    <button type="button" class="text-danger text-decoration-underline border-0 bg-transparent fw-bold">Delete User</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jean U</td>
+                  <td>name@marketing.com</td>
+                  <td>
+                    <select class="form-select form-select-sm border-0">
+                      <option value="Editor">Editor</option>
+                      <option value="Reader">Reader</option>
+                      <option value="Admin" selected>Admin</option>
+                    </select>
+                  </td>
+                  <td>Pending</td>
+                  <td>
+                    <button type="button" class="text-danger text-decoration-underline border-0 bg-transparent fw-bold">Delete User</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!--End of Content-->
+      <!-- Start of Knowledge -->
+      <aside
+        class="knowledge p-4 smooth d-flex flex-column flex-shrink-0"
+        id="knowledge"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="knowledge"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-right smooth"></i>
+        </button>
+        <div class="d-flex justify-content-end my-3">
+          <i class="material-icons text-primary mx-2">inbox</i>
+          <h4 class="text-decoration-underline text-primary fw-bold fs-l">
+            Knowledge base
+          </h4>
+        </div>
+        <div class="search position-relative mb-4">
+          <input
+            class="w-100 py-2 ps-3 pe-4 smooth"
+            type="text"
+            placeholder="Search content…"
+          />
+          <button class="position-y-center search-button bg-transparent">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="info smooth bg-white flex-fill p-3 rounded-1"></div>
+      </aside>
+      <!-- Start of Knowledge -->
+    </article>
+    <!-- End of Content-box -->
+
+    <!-- Required Scripts -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

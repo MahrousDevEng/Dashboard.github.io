@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required Styles -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Record-of-Process-Dashboard</title>
+  </head>
+  <body>
+    <!-- Start of Header -->
+    <header class="fixed-top bg-primary">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="me-2 me-lg-3 brand">
+            <a
+              class="navbar-brand custom-family fw-light fs-xlarge"
+              href="./index.html"
+            >
+              Data<span class="fw-bold">Shield</span>
+            </a>
+            <p class="mb-0 text-white fst-italic fw-light fs-s fs-lg-m">
+              Where expertise meets business needs
+            </p>
+          </div>
+          <button
+            class="navbar-toggler px-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#landingNavbar"
+            aria-controls="landingNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="
+              collapse
+              navbar-collapse
+              px-3 px-lg-0
+              bg-second bg-lg-transparent
+              justify-content-lg-end
+            "
+            id="landingNavbar"
+          >
+            <ul class="navbar-nav justify-content-lg-evenly mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./dashboard.html"
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Modules
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseOne"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item mt-2"
+                      href="./record-of-processing.html"
+                      >Record of Processing</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./dpia.html">DPIA</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Data Breaches</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./business-units.html"
+                      >TPRMs</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Transparency & Consent</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="#"
+                      >GDPR Audit</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Management
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseTwo"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./business-units.html"
+                      >Business Units</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./access.html">Access</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./notifications.html"
+                      >Notifications</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav flex-row position-relative ms-lg-3">
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Account
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseThree"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./settings.html"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./index.html"
+                      >Log Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="px-4 py-2 header-help">
+                <i class="fas fa-question-circle text-white"></i>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of Content-box -->
+    <article
+      class="
+        content-box
+        d-flex
+        g-0
+        bg-white
+        overflow-x-hidden
+        position-relative
+        custom-height
+      "
+      id="overlay"
+    >
+      <!-- Start of Guidance -->
+      <aside
+        class="guidance p-4 smooth d-flex flex-column flex-shrink-0"
+        id="guidance"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="guidance"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-left smooth"></i>
+        </button>
+        <h4 class="my-3 text-decoration-underline text-primary fw-bold fs-l">
+          Guidance
+        </h4>
+        <div class="info smooth bg-white flex-fill p-3 rounded-1">
+          <h3 class="fw-bold fs-5 mb-4">Record Of Processing</h3>
+          <ul class="list-unstyled fs-s fw-bold py-3 smooth" data-customshow="introduction">
+            <li class="mb-3">
+              The person responsible for the processing or the person providing
+              the information to be filled in the record.
+            </li>
+            <li class="mb-3">Location where the processing is taking place.</li>
+            <li class="mb-3">What is the purpose/objective of the process?</li>
+            <li class="mb-3">You may add additional details on the process.</li>
+            <li>You may add additional details on the process.</li>
+          </ul>
+          <ul class="list-unstyled fs-s fw-bold py-3 smooth d-none" data-customshow="personalData">
+            <li class="mb-3">
+              For what purpose are the personal data processed used for?
+            </li>
+            <li class="mb-3">Describe the personal data used.</li>
+            <li class="mb-3">Fill-in if one or more of these data are used: Health data, Racial/ethnical origin, political opinions, religious, philosophical beliefs, trade union membership, Genetic, biometric data, sexual orientation.</li>
+            <li class="mb-3">Describe to whom pertains the personal data: Clients/Employees/Prospects/Suppliers.</li>
+          </ul>
+        </div>
+      </aside>
+      <!-- End of Guidance -->
+      <!--Start of Content-->
+      <section class="dashboard-content flex-fill">
+        <div
+          class="
+            d-flex
+            flex-column flex-sm-row
+            justify-content-center justify-content-sm-between
+            align-items-center
+            mb-3
+          "
+        >
+          <h3 class="text-primary mt-lg-4 fw-bold h4 mb-3">
+            Record Of Processing
+          </h3>
+          <a
+            href="./record-reports.html"
+            class="
+              bg-primary
+              text-white
+              shadow
+              smooth
+              fs-l
+              py-2
+              px-4
+              text-decoration-none text-uppercase
+              rounded-2
+            "
+            data-customshow="introduction"
+          >reports</a>
+        </div>
+        <!-- Record of Processing -->
+        <div
+          class="
+            record-of-processing
+            borderHover
+            bg-icon
+            shadow
+            smooth
+            py-4
+            px-1 px-sm-4
+            rounded-1
+          "
+        >
+          <!-- Pagination Bullets -->
+          <ul class="pagination-bullets list-unstyled position-relative d-flex justify-content-between mx-auto mb-4">
+            <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth active" data-pagination="introduction">1</li>
+            <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth" data-pagination="personalData">2</li>
+            <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth" data-pagination="dataTransfer">3</li>
+            <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth" data-pagination="internalControls">4</li>
+            <li class="d-flex justify-content-center align-items-center rounded-circle cursor-pointer smooth" data-pagination="finish">
+              <i class="material-icons">done_all</i>
+            </li>
+          </ul>
+          <!-- Introduction Step -->
+          <form action="" class="wizard ms-4" id="introduction">
+            <div class="row mb-3 px-1">
+              <div class="col-12">
+                <h4 class="text-primary fw-bold mb-0">Introduction</h4>
+                <p>*Please complete the required record of processing</p>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <label class="form-label fw-bold">Business Unit*</label>
+              </div>
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <select
+                  class="form-select form-select-sm py-2 border-primary">
+                  <option selected>Select Business Unit</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                <label class="form-label fw-bold">Contact person*</label>
+              </div>
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <input type="email" class="borderHover shadow smooth rounded-1 px-2 py-1 w-100 f-outline-none" />
+              </div>
+            </div>
+            <div class="row mb-4 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                <label class="form-label fw-bold">Location</label>
+              </div>
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <input type="text" class="borderHover shadow smooth rounded-1 px-2 py-1 w-100 f-outline-none" />
+              </div>
+            </div>
+            <div class="row mb-4 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                <label class="form-label fw-bold">Process Name*</label>
+              </div>
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <input type="text" class="borderHover shadow smooth rounded-1 px-2 py-1 w-100 f-outline-none" />
+              </div>
+            </div>
+            <div class="row mb-5 px-2 py-1">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                <label class="form-label fw-bold">Process Name*</label>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border d-block w-fit ms-auto me-4" data-next="personalData">next</button>
+          </form>
+          <!-- Personal Data Step -->
+          <form action="" class="wizard ms-4 clearfix d-none" id="personalData">
+            <div class="row mb-4 px-1">
+              <div class="col-12">
+                <h4 class="text-primary fw-bold mb-0">Personal Data Description</h4>
+                <p>*Please complete the required record of processing</p>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                <label class="form-label fw-bold">Purpose of the personal data processing*</label>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                <label class="form-label fw-bold">Categories of Personal Data processed*</label>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                <label class="form-label fw-bold">Special Categories of Personal Data*</label>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <!-- Accordion -->
+            <div class="accordion position-relative">
+              <button class="expandUpDown position-absolute rounded-circle border border-primary text-primary bg-white smooth" type="button" data-bs-toggle="collapse" data-bs-target="#recordCollapse" aria-expanded="true" aria-controls="recordCollapse">
+                <i class="fas fa-chevron-up smooth"></i>
+              </button>
+              <div id="recordCollapse" class="collapse show smooth" aria-labelledby="headingOne">
+                <div class="row mb-3 p-2">
+                  <div class="col-12 col-sm-5 col-xl-12 col-xxl-5 position-relative">
+                    <span class="d-inline-block px-2 fw-bold text-white bg-primary rounded-circle me-1 position-absolute left-20">?</span>
+                    <label class="form-label fw-bold">Categories of Data Subjects*</label>
+                  </div>
+                  <div class="col-12 col-sm-7 col-xl-12 col-xxl-7 mb-5">
+                    <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border mt-3" data-back="introduction">back</button>
+            <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border float-end mt-3 me-4" data-next="dataTransfer">next</button>
+          </form>
+          <!-- Data Transfers Step -->
+          <form action="" class="wizard ms-4 clearfix d-none" id="dataTransfer">
+            <div class="row mb-4 px-1">
+              <div class="col-12">
+                <h4 class="text-primary fw-bold mb-0">Data Transfers</h4>
+                <p>*Please complete the required record of processing</p>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <label class="form-label fw-bold">Categories of Recipients*</label>
+                <p class="fs-s w-75">If applicable, describe to whom the data collected will be disclosed (e.g., Internal Department; Third Party).</p>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <label class="form-label fw-bold">Third party Name*</label>
+                <p class="fs-s w-75">If applicable, fill-in the name of the Organisation to whom the data is disclosed.</p>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <label class="form-label fw-bold">Third party Country*</label>
+                <p class="fs-s w-75">Fill-in the country where the Organisation to whom the data is disclosed is located.</p>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <!-- Accordion -->
+            <div class="accordion position-relative">
+              <button class="expandUpDown position-absolute rounded-circle border border-primary text-primary bg-white smooth" type="button" data-bs-toggle="collapse" data-bs-target="#recordCollapse" aria-expanded="true" aria-controls="recordCollapse">
+                <i class="fas fa-chevron-up smooth"></i>
+              </button>
+              <div id="recordCollapse" class="collapse show smooth" aria-labelledby="headingOne">
+                <div class="row mb-3 p-2">
+                  <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                    <label class="form-label fw-bold">Applications*</label>
+                    <p class="fs-s w-75">If applicable, fill-in the systems/applications used for the processing of these data.</p>
+                  </div>
+                  <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                    <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+                  </div>
+                </div>
+                <div class="row p-2">
+                  <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                    <label class="form-label fw-bold">Applications*</label>
+                    <p class="fs-s w-75">If applicable, fill-in the systems/applications used for the processing of these data.</p>
+                  </div>
+                  <div class="col-12 col-sm-7 col-xl-12 col-xxl-7 mb-5">
+                    <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border mt-3" data-back="personalData">back</button>
+            <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border float-end mt-3 me-4" data-next="internalControls">next</button>
+          </form>
+          <!-- Internal Controls Step -->
+          <form action="" class="wizard ms-4 clearfix d-none" id="internalControls">
+            <div class="row mb-4 px-1">
+              <div class="col-12">
+                <h4 class="text-primary fw-bold mb-0">Internal Controls</h4>
+                <p>*Please complete the required record of processing</p>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <label class="form-label fw-bold">Data Processing Agreement (DPA)</label>
+                <p class="fs-s w-75 mb-0">If known, indicate whether there is a DPA signed with this third party.</p>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <label class="form-label fw-bold">Data Retention Period</label>
+                <p class="fs-s w-75 mb-0">If known, indicate the standard or organisational data retention period for these data.</p>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <div class="row mb-5 p-2">
+              <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                <label class="form-label fw-bold">Technical and Organisational Security Measures</label>
+                <p class="fs-s w-75 mb-0">If known, describe and link to document the security measures in place.</p>
+              </div>
+              <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                <textarea class="borderHover smooth shadow rounded-1 resize-0 w-100 h-100 f-outline-none"></textarea>
+              </div>
+            </div>
+            <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border" data-back="dataTransfer">back</button>
+            <button class="text-white bg-primary text-uppercase rounded-2 py-2 px-4 shadow border-primary border float-end me-4" data-next="finish">next</button>
+          </form>
+          <!-- Finish step -->
+          <div class="wizard d-none" id="finish">
+            <h4 class="text-primary fw-bold text-center mb-4">Congratulations!</h4>
+            <p class="fw-bold lh-sm text-primary text-center w-75 mx-auto px-5 mb-4">
+              You finished a new process!<br />
+              You can now notify your top management or export the report as a PDF or xls file. You can always view and modify your process in report menu.
+            </p>
+            <!-- Options -->
+            <div class="d-flex flex-wrap justify-content-center mb-4">
+              <button type="button" class="borderHover shadow smooth bg-white text-primary text-uppercase fw-bold py-2 px-3 b-w rounded-2 mx-4 mb-3" data-bs-toggle="modal" data-bs-target="#notify">
+                notify
+              </button>
+              <button type="button" class="borderHover shadow smooth bg-white text-primary text-uppercase fw-bold py-2 px-3 b-w rounded-2 mx-4 mb-3">
+                <img src="./images/pdf-image.png" alt="PDF" />export
+              </button>
+              <button type="button" class="borderHover shadow smooth bg-white text-primary text-uppercase fw-bold py-2 px-3 b-w rounded-2 mx-4 mb-3">
+                <img src="./images/xcel-image.png" alt="XCEL" />export
+              </button>
+            </div>
+            <!-- Notify -->
+            <div class="modal fade" id="notify" tabindex="-1" aria-labelledby="notifyLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-3 border-primary rounded-1 p-3 align-items-center">
+                  <button type="button" class="btn-close fs-s ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <a href="./dashboard.html" class="mb-4">
+                    <i class="material-icons text-white bg-primary fs-1 p-3 rounded-circle">done_all</i>
+                  </a>
+                  <p class="text-center">You just notified your top management. It will be able to comment your answers.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Record Details -->
+            <span class="d-block text-center mb-3">Document overview:</span>
+            <!-- Accordion -->
+            <div class="accordion position-relative">
+              <button class="expandUpDown position-absolute rounded-circle border border-primary text-primary bg-white smooth" type="button" data-bs-toggle="collapse" data-bs-target="#recordCollapse" aria-expanded="true" aria-controls="recordCollapse">
+                <i class="fas fa-chevron-up smooth"></i>
+              </button>
+              <div id="recordCollapse" class="collapse show smooth" aria-labelledby="headingOne">
+                <!-- Introduction Details -->
+                <div class="bg-white px-3 py-4 rounded-1 border border-bdColor position-relative mb-3">
+                  <button role="button" class="text-white text-uppercase py-2 px-3 rounded-2 bg-primary border fs-l border-primary position-absolute end-0 mx-3" data-edit="introduction">edit</button>
+                  <h5 class="text-primary fw-bold mb-4">Introduction</h5>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Business Unit*</label>
+                    </div>
+                    <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">
+                      Marketing department
+                    </div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Contact person*</label>
+                      <p class="fs-s w-75 mb-0">The person responsible for the processing or the person providing the information to be filled in the record.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">jeanedouard@company.com</div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Location</label>
+                      <p class="fs-s w-75 mb-0">Location where the processing is taking place.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">Belgium</div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Process Name*</label>
+                      <p class="fs-s w-75 mb-0">What is the purpose/objective of the process?</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">Name</div>
+                  </div>
+                  <div class="row ms-1">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Process Description*</label>
+                      <p class="fs-s w-75">You may add additional details on the process.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                    </div>
+                  </div>
+                </div>
+                <!-- Personal Data Details -->
+                <div class="bg-white px-3 py-4 rounded-1 border border-bdColor position-relative mb-3">
+                  <button role="button" class="top-50px text-white text-uppercase py-2 px-3 rounded-2 bg-primary border fs-l border-primary position-absolute end-0 mx-3" data-edit="personalData">edit</button>
+                  <h5 class="text-primary fw-bold mb-5">Personal Data Description</h5>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Purpose of the personal data processing*</label>
+                      <p class="fs-s w-75">For what purpose are the personal data processed used for?</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                    </div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Categories of Personal Data processed*</label>
+                      <p class="fs-s w-75">Describe the personal data used.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Special Categories of Personal Data*</label>
+                      <p class="fs-s w-75">Fill-in if one or more of these data are used: Health data, Racial/ethnical origin, political opinions, religious, philosophical beliefs, trade union membership, Genetic, biometric data, sexual orientation.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                  <div class="row ms-1">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Categories of Data Subjects*</label>
+                      <p class="fs-s w-75">Describe to whom pertains the personal data: Clients/Employees/Prospects/Suppliers.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                </div>
+                <!-- Data Transfers Step Details -->
+                <div class="bg-white px-3 py-4 rounded-1 border border-bdColor position-relative mb-3">
+                  <button role="button" class="text-white text-uppercase py-2 px-3 rounded-2 bg-primary border fs-l border-primary position-absolute end-0 mx-3" data-edit="dataTransfer">edit</button>
+                  <h5 class="text-primary fw-bold mb-5">Data Transfers</h5>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Categories of Recipients*</label>
+                      <p class="fs-s w-75">If applicable, describe to whom the data collected will be disclosed (e.g., Internal Department; Third Party).</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                    </div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Third party Name*</label>
+                      <p class="fs-s w-75">If applicable, fill-in the name of the Organisation to whom the data is disclosed.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Third party Country*</label>
+                      <p class="fs-s w-75">Fill-in the country where the Organisation to whom the data is disclosed is located.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                  <div class="row ms-1">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Applications*</label>
+                      <p class="fs-s w-75">If applicable, fill-in the systems/applications used for the processing of these data.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                </div>
+                <!-- Internal Controls Details -->
+                <div class="bg-white px-3 py-4 rounded-1 border border-bdColor position-relative mb-3">
+                  <button role="button" class="text-white text-uppercase py-2 px-3 rounded-2 bg-primary border fs-l border-primary position-absolute end-0 mx-3" data-edit="internalControls">edit</button>
+                  <h5 class="text-primary fw-bold mb-5">Internal Controls</h5>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Data Processing Agreement (DPA)</label>
+                      <p class="fs-s w-75">If known, indicate whether there is a DPA signed with this third party.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                    </div>
+                  </div>
+                  <div class="row ms-1 mb-3">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Data Retention Period</label>
+                      <p class="fs-s w-75">If known, indicate the standard or organisational data retention period for these data.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                  <div class="row ms-1">
+                    <div class="col-12 col-sm-5 col-xl-12 col-xxl-5">
+                      <label class="form-label fw-bold">Technical and Organisational Security Measures</label>
+                      <p class="fs-s w-75">If known, describe and link to document the security measures in place.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-xl-12 col-xxl-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End of Content-->
+      <!-- Start of Knowledge -->
+      <aside
+        class="knowledge p-4 smooth d-flex flex-column flex-shrink-0"
+        id="knowledge"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="knowledge"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-right smooth"></i>
+        </button>
+        <div class="d-flex justify-content-end my-3">
+          <i class="material-icons text-primary mx-2">inbox</i>
+          <h4 class="text-decoration-underline text-primary fw-bold fs-l">
+            Knowledge base
+          </h4>
+        </div>
+        <div class="search position-relative mb-4">
+          <input
+            class="w-100 py-2 ps-3 pe-4 smooth"
+            type="text"
+            placeholder="Search content…"
+          />
+          <button class="position-y-center search-button bg-transparent">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="info smooth bg-white flex-fill p-3 rounded-1"></div>
+      </aside>
+      <!-- Start of Knowledge -->
+    </article>
+    <!-- End of Content-box -->
+
+    <!-- Required Scripts -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

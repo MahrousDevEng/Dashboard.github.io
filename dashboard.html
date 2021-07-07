@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required Styles -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- Start of Header -->
+    <header class="fixed-top bg-primary">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="me-2 me-lg-3 brand">
+            <a
+              class="navbar-brand custom-family fw-light fs-xlarge"
+              href="./index.html"
+            >
+              Data<span class="fw-bold">Shield</span>
+            </a>
+            <p class="mb-0 text-white fst-italic fw-light fs-s fs-lg-m">
+              Where expertise meets business needs
+            </p>
+          </div>
+          <button
+            class="navbar-toggler px-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#landingNavbar"
+            aria-controls="landingNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="
+              collapse
+              navbar-collapse
+              px-3 px-lg-0
+              bg-second bg-lg-transparent
+              justify-content-lg-end
+            "
+            id="landingNavbar"
+          >
+            <ul class="navbar-nav justify-content-lg-evenly mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./dashboard.html"
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Modules
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseOne"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./record-of-processing.html"
+                      >Record of Processing</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./dpia.html">DPIA</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Data Breaches</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./business-units.html">TPRMs</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Transparency & Consent</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="#">GDPR Audit</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Management
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseTwo"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./business-units.html">Business Units</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./access.html">Access</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./notifications.html">Notifications</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav flex-row position-relative ms-lg-3">
+              <li class="nav-item position-relative">
+                <button
+                  class="nav-link accordion-button collapsed pe-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Account
+                </button>
+                <ul
+                  class="accordion-collapse collapse mb-3 list-unstyled"
+                  id="collapseThree"
+                  data-bs-parent="#landingNavbar"
+                >
+                  <li>
+                    <a class="dropdown-item mt-2" href="./settings.html"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="./index.html"
+                      >Log Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="px-4 py-2 header-help">
+                <i class="fas fa-question-circle text-white"></i>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of Content-box -->
+    <article
+      class="
+        content-box
+        d-flex
+        g-0
+        bg-white
+        overflow-x-hidden
+        position-relative
+        custom-height
+      "
+      id="overlay"
+    >
+      <!-- Start of Guidance -->
+      <aside
+        class="guidance p-4 smooth d-flex flex-column flex-shrink-0"
+        id="guidance"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="guidance"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-left smooth"></i>
+        </button>
+        <h4 class="my-3 text-decoration-underline text-primary fw-bold fs-l">
+          Guidance
+        </h4>
+        <div class="info smooth bg-white flex-fill p-3 rounded-1">
+          How to use DataShield?
+        </div>
+      </aside>
+      <!-- End of Guidance -->
+      <!--Start of Content-->
+      <section class="dashboard-content flex-fill">
+        <!-- Start of Alert -->
+        <div
+          class="
+            alert alert-warning alert-dismissible
+            fade
+            show
+            d-flex
+            align-items-start
+            justify-content-center
+            p-2
+            px-lg-4
+            smooth
+            mx-2 mx-lg-0
+          "
+          role="alert"
+        >
+          <p class="mb-0 d-sm-none">
+            <span
+              class="
+                d-inline-block
+                custom-family
+                fs-xlarge
+                text-primary text-center
+                me-2
+                rounded-circle
+              "
+              >!</span
+            >
+            Welcome to your dashboard. We recommend you first to
+            <a href="./business-units.html" class="alert-link"
+              >create your business units.</a
+            >
+          </p>
+          <p class="mb-0 d-none d-sm-block">
+            <span
+              class="
+                d-inline-block
+                custom-family
+                fs-xlarge
+                text-primary text-center
+                me-2
+                rounded-circle
+              "
+              >!</span
+            >
+            Welcome to your dashboard. You can manage your business owners,
+            review all assessments and manage access to the platform. We
+            recommend you first to
+            <a href="./business-units.html" class="alert-link"
+              >create your business units.</a
+            >
+          </p>
+          <button
+            type="button"
+            class="close text-primary bg-transparent border-0 smooth ms-2"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!-- End of Alert -->
+        <h3
+          class="
+            text-primary
+            mt-lg-4
+            fw-bold
+            fs-xlarge
+            text-center text-sm-start
+            mb-3
+          "
+        >
+          Dashboard
+        </h3>
+        <!-- Start of Pending-tasks -->
+        <div class="pending-tasks smooth py-3 px-1 px-sm-4 rounded-1">
+          <h5 class="text-primary fw-bold fs-m mb-3">Modules</h5>
+          <!-- Start of Services -->
+          <div class="services justify-content-evenly mb-3">
+            <a href="./record-of-processing.html" class="service rounded-3">
+              <i class="material-icons">dns</i>
+              <span>Record Of Process</span>
+            </a>
+            <a href="./dpia.html" class="service rounded-3">
+              <i class="material-icons">screen_lock_portrait</i>
+              <span>DPIA</span>
+            </a>
+            <a href="#" class="service rounded-3">
+              <i class="material-icons">lock_open</i>
+              <span>Data Breaches</span>
+            </a>
+            <a href="./business-units.html" class="service rounded-3">
+              <i class="material-icons">security</i>
+              <span>TPRMs</span>
+            </a>
+            <a href="#" class="service rounded-3">
+              <i class="material-icons">search</i>
+              <span>DPO Outsourced</span>
+            </a>
+            <a href="#" class="service rounded-3">
+              <i class="material-icons">vpn_lock</i>
+              <span>GDPR Privacy</span>
+            </a>
+          </div>
+          <!-- End of Services -->
+          <!-- Start of Manage-Task -->
+          <div class="table-responsive">
+            <h5 class="text-primary fw-bold fs-m mb-2">Tasks management</h5>
+            <table class="table table-borderless">
+              <tbody>
+                <tr
+                  class="
+                    w-100
+                    row
+                    g-0
+                    align-items-center
+                    px-2
+                    rounded-1
+                    smooth
+                    mb-1
+                  "
+                >
+                  <td class="col-6">
+                    According to your latest DPIA pre assessment, you have to
+                    conduct a DPIA immediately!
+                  </td>
+                  <td class="col-2">
+                    <h6 class="fw-bold">Due date</h6>
+                    <span>24-06-2021</span>
+                  </td>
+                  <td class="col-2">
+                    <h6 class="fw-bold">Owner</h6>
+                    <span>jean@gmail.com</span>
+                  </td>
+                  <td
+                    class="
+                      col-2
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                    "
+                  >
+                    <a
+                      class="
+                        status
+                        d-block
+                        text-white text-uppercase text-decoration-none
+                        py-1
+                        px-3
+                        fw-bold
+                        rounded-2
+                        text-center
+                      "
+                      href="#"
+                      role="button"
+                      >in progress</a
+                    >
+                    <input class="form-check-input" type="checkbox" value="" />
+                  </td>
+                </tr>
+                <tr
+                  class="
+                    w-100
+                    row
+                    g-0
+                    align-items-center
+                    px-2
+                    rounded-1
+                    smooth
+                    mb-1
+                  "
+                >
+                  <td class="col-6">
+                    According to your latest DPIA pre assessment, you have to
+                    conduct a DPIA immediately!
+                  </td>
+                  <td class="col-2">
+                    <h6 class="fw-bold">Due date</h6>
+                    <span>24-06-2021</span>
+                  </td>
+                  <td class="col-2">
+                    <h6 class="fw-bold">Owner</h6>
+                    <span>jean@gmail.com</span>
+                  </td>
+                  <td
+                    class="
+                      col-2
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                    "
+                  >
+                    <a
+                      class="
+                        status
+                        d-block
+                        text-white text-uppercase text-decoration-none
+                        py-1
+                        px-3
+                        fw-bold
+                        rounded-2
+                        text-center
+                      "
+                      href="#"
+                      role="button"
+                      >not started</a
+                    >
+                    <input class="form-check-input" type="checkbox" value="" />
+                  </td>
+                </tr>
+                <tr
+                  class="w-100 row g-0 align-items-center px-2 rounded-1 smooth"
+                >
+                  <td class="col-6">
+                    According to your latest DPIA pre assessment, you have to
+                    conduct a DPIA immediately!
+                  </td>
+                  <td class="col-2">
+                    <h6 class="fw-bold">Due date</h6>
+                    <span>24-06-2021</span>
+                  </td>
+                  <td class="col-2">
+                    <h6 class="fw-bold">Owner</h6>
+                    <span>jean@gmail.com</span>
+                  </td>
+                  <td
+                    class="
+                      col-2
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                    "
+                  >
+                    <a
+                      class="
+                        status
+                        d-block
+                        text-white text-uppercase text-decoration-none
+                        py-1
+                        ps-3
+                        pe-5
+                        fw-bold
+                        rounded-2
+                        text-center
+                        position-relative
+                      "
+                      href="#"
+                      role="button"
+                    >
+                      done
+                      <i class="material-icons position-y-center mx-3 fs-m"
+                        >delete</i
+                      >
+                    </a>
+                    <input class="form-check-input" type="checkbox" value="" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="text-primary fw-bold fs-m mb-2">Add new tasks</h5>
+            <table class="table table-borderless add-task">
+              <tbody>
+                <tr
+                  class="w-100 row g-0 align-items-center px-2 rounded-1 smooth"
+                >
+                  <td class="col-4 me-3">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control rounded-1"
+                        id="text-description"
+                        placeholder="Task description…"
+                      />
+                      <label for="text-description">Task description…</label>
+                    </div>
+                  </td>
+                  <td class="col-2 d-flex align-self-end me-3">
+                    <select
+                      class="form-select form-select-sm smooth py-2"
+                      aria-label=".form-select-sm example"
+                    >
+                      <option selected>Select Business Unit</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </td>
+                  <td class="col-2 me-3">
+                    <h6 class="fw-bold">Due date</h6>
+                    <input class="form-control" type="date" value="" />
+                  </td>
+                  <td class="col-2 me-3">
+                    <h6 class="fw-bold">Owner</h6>
+                    <input class="form-control" type="text" name="owner" />
+                  </td>
+                  <td class="col-1">
+                    <a
+                      class="
+                        bg-primary
+                        d-block
+                        text-white text-uppercase text-decoration-none
+                        py-1
+                        px-3
+                        fw-bold
+                        rounded-2
+                        text-center
+                      "
+                      href="#"
+                      role="button"
+                      >add</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- End of Manage-Task -->
+        </div>
+        <!-- End of Pending-tasks -->
+      </section>
+      <!--End of Content-->
+      <!-- Start of Knowledge -->
+      <aside
+        class="knowledge p-4 smooth d-flex flex-column flex-shrink-0"
+        id="knowledge"
+      >
+        <button
+          class="expand position-absolute bg-white smooth rounded-circle"
+          role="button"
+          data-toggle="show"
+          data-target="knowledge"
+          data-overlay="overlay"
+        >
+          <i class="fas fa-chevron-right smooth"></i>
+        </button>
+        <div class="d-flex justify-content-end my-3">
+          <i class="material-icons text-primary mx-2">inbox</i>
+          <h4 class="text-decoration-underline text-primary fw-bold fs-l">
+            Knowledge base
+          </h4>
+        </div>
+        <div class="search position-relative mb-4">
+          <input
+            class="w-100 py-2 ps-3 pe-4 smooth"
+            type="text"
+            placeholder="Search content…"
+          />
+          <button class="position-y-center search-button bg-transparent">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="info smooth bg-white flex-fill p-3 rounded-1"></div>
+      </aside>
+      <!-- Start of Knowledge -->
+    </article>
+    <!-- End of Content-box -->
+
+    <!-- Required Scripts -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
